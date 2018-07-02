@@ -75,7 +75,7 @@ header {
 }
 
 .menu {
-    width: 100%;
+    width: auto;
     margin: 0 auto;
     padding: 2px;
     /*z-index: 1000 !important;*/
@@ -124,8 +124,9 @@ header {
     margin: 0;
     width: auto;
     height: 100%;
+    float: right;
     /*padding: 13px;*/
-    margin-right: 150px;
+    margin-right: 180px;
     vertical-align: middle;
 }
 .menu-utl ul {
@@ -176,12 +177,16 @@ header {
 
 .post{
     margin: 0;
-    padding: 150px;
+    padding: 50px;
+    /*margin: 150px 0px;*/
+    width: 100%;
+    height: 200px;
     background-image: url('assets/images/pexels-photo-236910.jpeg');
     background-size: cover;
+    /*background-color: #EF3159;*/
 }
 .post-header{
-    display: block;
+    display: inline-block;
     float: left;
     filter: invert(100%);
     font-family: "Bahij TheSansArabic ExtraBold";
@@ -350,4 +355,17 @@ footer ul li {
     position: fixed;
     top: 0;
     width: 100%;
+}
+.inner-container{
+    padding: 0 10%;
+    margin: 0;
+}
+.inner-container ul{
+    background-color: #EF3159;
+    width: auto;
+}
+.inner-container ul li {
+    display: inline-block;
+    padding: 20px;
+    font-family: "Bahij TheSansArabic Bold";
 }
