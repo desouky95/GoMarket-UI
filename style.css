@@ -3,6 +3,7 @@ body {
     padding: 0;
     width: 100%;
     overflow-x: hidden;
+    height: 100%;
 }
 
 body::-webkit-scrollbar{
@@ -13,16 +14,29 @@ body::-webkit-scrollbar-thumb{
     background-color: #4b57ce;
     border-radius: 2px;
 }
+
+/*main container and section colors*/
+
+.section-s {
+    background-color: #e9e9e9;
+}
+.section {
+    background-color: #FFF;
+}
+.container{
+    width: 100%;
+    height: auto;
+}
+
+/*header contents*/
+
 header {
     width: 100%;
     margin: 0 auto;
     height: 75px;
     border-bottom: 1px solid lightgray;
     background-color: #FFFFFF;
-}
-.container{
-    width: 100%;
-    height: auto;
+    position: relative;
 }
 .header-item{
     float: left;
@@ -73,9 +87,8 @@ header {
     color: #4b57ce;
     font-size: 18px;
 }
-
 .menu {
-    width: auto;
+    width: 100%;
     margin: 0 auto;
     padding: 2px;
     /*z-index: 1000 !important;*/
@@ -109,14 +122,6 @@ header {
     font-family: "Bahij TheSansArabic ExtraBold";
     border-bottom: 2px solid #4b57ce;
 }
-.section-s {
-    background-color: #e9e9e9;
-}
-.section {
-    background-color: #FFF;
-}
-
-
 .menu-utl{
     display: inline-block;
     float: right;
@@ -137,7 +142,6 @@ header {
     display: inline-block;
     margin-left: 10px;
 }
-
 .search-input {
     border-radius: 5px;
     border: 0;
@@ -161,7 +165,6 @@ header {
     border: 0;
     background: url("assets/icons/svg/shopping-bag-8.svg");
 }
-
 .cart-items{
     width: 25px;
     height: 25px;
@@ -175,38 +178,52 @@ header {
     font-size: 10px;
 }
 
-.post{
+/*section with cover photo*/
+.section-cover{
     margin: 0;
-    padding: 50px;
-    /*margin: 150px 0px;*/
-    width: 100%;
-    height: 200px;
-    background-image: url('assets/images/pexels-photo-236910.jpeg');
-    background-size: cover;
-    /*background-color: #EF3159;*/
+    padding: 13%;
+    height: auto;
+    position: relative;
 }
-.post-header{
-    display: inline-block;
+.section-cover-image {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.section-cover-image img {
+    width: 100%;
+}
+.section-cover-header{
+    display: block;
     float: left;
     filter: invert(100%);
     font-family: "Bahij TheSansArabic ExtraBold";
     font-size: 45px;
+    /*background-color: #a9fd00;*/
 }
-.post-description{
-    float: left;
+.section-cover-description ul {
+    list-style-type: none;
+}
+.section-cover-description{
     width: 350px;
     height: auto;
     font-size: 20px;
     filter: invert(100%);
     font-family: "Bahij TheSansArabic Plain";
-    margin-bottom: 25px;
-    display: block;
+    /*margin-bottom: 25px;*/
+    display: inline-block;
 }
-
-.post-content{
-    max-width: 450px;
+.section-cover-content{
+    max-width: 50%;
+    display: inline-block;
+    position: relative;
+    z-index: 999;
 }
-.post-actions button {
+.section-cover-actions button {
     border: 0;
     background: linear-gradient(90deg, rgba(75,87,206,1) 0%, rgba(101,61,145,1) 100%);
     color: white;
@@ -216,30 +233,53 @@ header {
     font-size: 20px;
     font-stretch: semi-expanded;
     padding:  10px 80px;
+    display: block;
     border-radius: 5px;
     outline: none;
 }
 
-.list-item{
-    display: inline-block;
-    margin: 5px;
+.section-4{
+    padding: 5%;
 }
-.list{
-    margin: 0 auto;
-    padding: 40px;
-    width: 100%;
-    margin-left: 150px;
+.section-cover-image-circle {
+    width: 200px;
+    height: 200px;
+    vertical-align: bottom;
+    border-radius: 50%;
+    background-color: #FFF;
+    filter: invert(100%);
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    display: inline-block;
+}
+.section-cover-image-circle img{
+    /*flex-shrink: 0;*/
+    min-width: 100%;
+    min-height: 100%
 }
 
-.list input {
+/*list with inline style*/
+.inline-list{
+    text-align: center;
+}
+.inline-list .list-item{
+    display: inline-block;
+    margin: 2%;
+}
+.inline-list .list-item-text {
+    color: #6e6e6e;
+}
+.inline-list input {
     padding: 10px ;
     width: 350px;
     outline: none;
-    border-radius: 3px;
-    border: 1px solid #c9c9c9;
+    border-radius: 5px;
+    border: 1px solid lightgray;
     color: #6e6e6e;
 }
-.list button {
+.inline-list button{
     border-radius: 3px;
     padding: 6px ;
     width: 200px;
@@ -250,17 +290,35 @@ header {
     font-size: 15px;
     transition: ease-out 0.6s;
 }
-
-.list button:hover{
+.inline-list button:hover{
     background-color: #4b57ce;
     color: white;
 }
 
-.list p {
-    color: #999999;
-    font-family: "Bahij TheSansArabic Plain";
-    font-size: 15px;
+/*list with images*/
+
+.list-images{
+    text-align: center;
+    padding: 2%;
 }
+.list-images .list-item {
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+}
+.list-images .list-item img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+.list-images .list-item .title{
+    font-size: 25px;
+    font-family: "Bahij TheSansArabic Plain";
+    margin-top: 20px;
+}
+
+/*section title*/
 
 .section-title {
     padding-top: 25px;
@@ -270,6 +328,8 @@ header {
     font-size: 25px;
     margin: 0 auto;
 }
+
+/*slider content*/
 
 .slider{
     padding: 20px;
@@ -316,9 +376,10 @@ header {
 }
 
 footer{
+    margin: 0;
+    padding: 0;
     width: 100%;
     background-color: #4b57ce;
-    /*text-align: center;*/
     padding: 2px;
 }
 footer p {
@@ -349,11 +410,14 @@ footer ul li {
 .header {
     z-index: 1000;
     background-color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
 .sticky {
     position: fixed;
-    top: 0;
+    /*top: 100%;*/
     width: 100%;
 }
 .inner-container{
@@ -368,4 +432,12 @@ footer ul li {
     display: inline-block;
     padding: 20px;
     font-family: "Bahij TheSansArabic Bold";
+}
+
+.fade-out{
+    opacity: 0;
+}
+
+.spacer{
+    margin-top:125px;
 }

@@ -1,5 +1,6 @@
 <html>
     <head>
+        <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
@@ -51,60 +52,68 @@
             </div>
         </div>
     </div>
-    <div class="container section-s">
-        <div class="post">
-            <div class="post-content">
-                <div class="post-header post-ma">
+    <div class="container section-s spacer">
+        <div class="section-cover">
+            <div class="section-cover-image">
+                <img src="assets/images/pexels-photo-236910.jpeg">
+            </div>
+            <div class="section-cover-content">
+                <div class="section-cover-header">
                     Explore Stores
                 </div>
-                <div class="post-description post-ma">
+                <div class="section-cover-description">
                     Seen something you love? Want it Cheaper? Explore Stores
                 </div>
-                <div class="post-actions post-ma">
+                <div class="section-cover-actions">
                     <button>EXPLORE</button>
                 </div>
             </div>
         </div>
     </div>
     <div class="container section">
-        <div class="list">
-            <p class="list-item">Stay up to data with latest news and offers</p>
-            <input class="list-item" placeholder="Enter your email">
-            <button class="list-item">SUBSCRIBE</button>
+        <div class="inline-list">
+            <div class="list-item list-item-text">
+                <p>Stay up to data with latest news and offers</p>
+            </div>
+            <div class="list-item">
+                <input placeholder="Enter your email">
+            </div>
+            <div class="list-item inline-list-action">
+                <button >SUBSCRIBE</button>
+            </div>
         </div>
     </div>
     <div class="container section-s">
         <div class="section-title" style="color: #f8f8f8">
             <p>POPULAR STORES/</p>
         </div>
-        <div class="list" style="margin: 0">
+        <div class="list-images" style="margin: 0">
+
             <div class="list-item">
-            <img src="assets/images/44.png">
-        </div>
+                <img src="assets/images/44.png">
+                <div class="title">Store 1</div>
+            </div>
             <div class="list-item">
-            <img src="assets/images/44.png">
-        </div>
+                <img src="assets/images/pexels-photo-236910.jpeg">
+                <div class="title">Store 1</div>
+            </div>
             <div class="list-item">
-            <img src="assets/images/44.png">
-        </div>
+                <img src="assets/images/pexels-photo-236910.jpeg">
+                <div class="title">Store 1</div>
+            </div>
             <div class="list-item">
-            <img src="assets/images/44.png">
-        </div>
-            <div class="list-item">
-            <img src="assets/images/44.png">
-        </div>
-            <div class="list-item">
-            <img src="assets/images/44.png">
-        </div>
+                <img src="assets/images/pexels-photo-236910.jpeg">
+                <div class="title">Store 1</div>
+            </div>
 
         </div>
     </div>
     <div class="container section">
 
-        <div class="section-title" style="color:#4b57ce;">
+        <div class="section-title" >
             <p>NEW PRODUCTS</p>
         </div>
-        <div class="slider slider-n">
+        <div class="slider-n">
             <div class="slide">
                 <div class="item-data">
                     <img class="item" src="assets/images/product.png">
@@ -149,21 +158,24 @@
             </div>
         </div>
         </div>
-        <div class="container section-s">
-            <div class="post">
-                <div class="post-content">
-                    <div class="post-header post-ma">
-                        Launch Your Business
-                    </div>
-                    <div class="post-description post-ma">
-                        Seen something you love? Want it Cheaper? Explore Stores
-                    </div>
-                    <div class="post-actions post-ma">
-                        <button>EXPLORE</button>
-                    </div>
+    <div class="container section-s">
+        <div class="section-cover">
+            <div class="section-cover-image">
+                <img src="assets/images/pexels-photo-236910.jpeg">
+            </div>
+            <div class="section-cover-content">
+                <div class="section-cover-header">
+                    Explore Stores
+                </div>
+                <div class="section-cover-description">
+                    Seen something you love? Want it Cheaper? Explore Stores
+                </div>
+                <div class="section-cover-actions">
+                    <button>EXPLORE</button>
                 </div>
             </div>
         </div>
+    </div>
     <div class="section-title" style="color:#4b57ce;">
         <p>POPULAR PRODUCTS</p>
     <div class="slider slider-n">
@@ -211,7 +223,7 @@
         </div>
     </div>
     </div>
-    <footer>
+    <footer id="footer">
         <div class="footer-content">
         <ul>
             <li>About Us</li>
@@ -227,8 +239,7 @@
         $('.slider-n').slick({
             infinite: true,
             slidesToShow: 4,
-            slidesToScroll: 4,
-            dots: true
+            slidesToScroll: 4
         });
     </script>
     <script src="main.js"></script>
